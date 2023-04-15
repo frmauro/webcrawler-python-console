@@ -1,6 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
+import json
 import re
+
+
+class Container:
+ 
+    # init method or constructor
+    def __init__(self, url, title):
+        self.url = url
+        self.title = title
 
 # function to extract html document from given url
 def getHTMLdocument(url):
@@ -33,10 +42,22 @@ soup = BeautifulSoup(html_document, 'html.parser')
 #     # display the actual urls
 #     print(link)  
 
-# title = soup.title
-# print(title)
+title = soup.title
+titleText = title.get_text()
+
+containerObj = Container(url_to_scrape, titleText)
+
+print(containerObj.url)
+print(containerObj.title)
+
+
+# convert into JSON:
+containerJson = json.dumps(containerObj.__dict__)
+print(containerJson)
 
 # print(soup.get_text())
 
 
 #print(html_document)
+
+
