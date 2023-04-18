@@ -47,8 +47,8 @@ titleText = title.get_text()
 
 containerObj = Container(url_to_scrape, titleText)
 
-print(containerObj.url)
-print(containerObj.title)
+#print(containerObj.url)
+#print(containerObj.title)
 
 
 # convert into JSON:
@@ -59,5 +59,31 @@ print(containerJson)
 
 
 #print(html_document)
+
+# import requests
+
+# def handler(pd: "pipedream"):
+#   token = f'{pd.inputs["coda"]["$auth"]["api_token"]}'
+#   authorization = f'Bearer {token}'
+#   headers = {"Authorization": authorization, "Content-Type": 'application/json'}
+#   r = requests.get('https://coda.io/apis/v1/whoami', headers=headers)
+#   # Export the data 
+# for use in future steps
+#   return r.json()
+
+
+# import requests
+
+# headers = {'Authorization': 'Bearer <your API token>'}
+# uri = 'https://coda.io/apis/v1/docs'
+# params = {
+#   'isOwner': True,
+#   'query': 'New',
+# }
+# res = requests.get(uri, headers=headers, params=params).json()
+
+# print(f'First doc is: {res["items"][0]["name"]}')
+# # => First doc is: New Document
+
 
 
