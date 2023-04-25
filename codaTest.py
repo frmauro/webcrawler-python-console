@@ -1,12 +1,7 @@
-import requests
+from codaio import Coda, Document
+# Initialize by providing a coda object directly
+coda = Coda('5335e58b-1d04-474a-ab86-df2ec848ae9c')
 
-headers = {'Authorization': 'Bearer <your API token>'}
-uri = 'https://coda.io/apis/v1/docs'
-params = {
-  'isOwner': True,
-  'query': 'New',
-}
-res = requests.get(uri, headers=headers, params=params).json()
+doc = Document('memex', coda=coda)
 
-print(f'First doc is: {res["items"][0]["name"]}')
-# => First doc is: New Document
+#doc.list_tables()

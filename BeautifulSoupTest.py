@@ -56,18 +56,31 @@ containerJson = json.dumps(containerObj.__dict__)
 print(containerJson)
 
 # print(soup.get_text())
-
-
 #print(html_document)
-
 # import requests
 
-# def handler(pd: "pipedream"):
-#   token = f'{pd.inputs["coda"]["$auth"]["api_token"]}'
-#   authorization = f'Bearer {token}'
-#   headers = {"Authorization": authorization, "Content-Type": 'application/json'}
-#   r = requests.get('https://coda.io/apis/v1/whoami', headers=headers)
-#   # Export the data 
+# headers = {'Authorization': 'Bearer 5335e58b-1d04-474a-ab86-df2ec848ae9c'}
+# uri = 'https://coda.io/d/memex_dpOe5ixBASv/bela-sopa_sud_o#sopa_tuKst/'
+# params = {
+#   'isPublished': True,
+#   'query': 'New',
+# }
+# res = requests.get(uri, headers=headers, params=params).json()
+
+# print(f'First doc is: {res["items"][0]["name"]}')
+# # => First doc is: New Document
+
+
+
+
+#def handler(pd: "pipedream"):
+  #token = f'{pd.inputs["coda"]["$auth"]["api_token"]}'
+  #token = '5335e58b-1d04-474a-ab86-df2ec848ae9c'
+  #authorization = f'Bearer {token}'
+  #headers = {"Authorization": authorization, "Content-Type": 'application/json'}
+  #r = requests.get('https://coda.io/d/memex_dpOe5ixBASv/bela-sopa_sud_o#sopa_tuKst/', headers=headers)
+  #print(r.json())
+  # Export the data 
 # for use in future steps
 #   return r.json()
 
