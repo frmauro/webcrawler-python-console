@@ -6,7 +6,7 @@ uri = f'https://coda.io/apis/v1/docs/pOe5ixBASv/tables/grid-wWfa52dKst/rows/i-zU
 payload = {
   'row': {
     'cells': [
-      {'column': 'c-ILOZNEGduy', 'value': 'https://odia.ig.com.br'},
+      {'column': 'c-ILOZNEGduy', 'value': 'https://www.scrapethissite.com/pages/simple/'},
     ],
   },
 }
