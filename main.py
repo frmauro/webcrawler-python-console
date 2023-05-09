@@ -9,7 +9,7 @@ soup = SoupService.getSoupDocument(soupService)
 # print(soup.title)
 # print(soup.get_text())
 
-codaService = CodaService(url_to_scrape, soup.title)
+codaService = CodaService(url_to_scrape, soup.title, soup.get_text())
 resColumn = CodaService.getColumnValue(url_to_scrape)
 #print(resColumn)
 #print(len(resColumn["items"]))
@@ -24,7 +24,7 @@ if itemsLenght == 0:
 
 if itemsLenght > 0:
     print("foi encontrado a url com essa valor")
-    res = CodaService.updateTitle(codaService)
+    res = CodaService.update(codaService)
     print(f'Updated row {res["id"]}')
 
 
