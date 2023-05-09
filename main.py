@@ -23,9 +23,9 @@ if itemsLenght == 0:
 
 
 if itemsLenght > 0:
-    #res = CodaService.updateTitle(codaService)
-    #print(f'Updated row {res["id"]}')
     print("foi encontrado a url com essa valor")
+    res = CodaService.updateTitle(codaService)
+    print(f'Updated row {res["id"]}')
 
 
 
